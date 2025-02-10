@@ -13,21 +13,19 @@ if (!isset($_SESSION['user_id'])) {
             <li class="nav-item">
                 <a class="nav-link text-white" href="dashboard.php">Dashboard</a>
             </li>
-            
-            
+            <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin'): ?>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="users.php">Manage Users</a>
+                </li>
+            <?php endif; ?>
             <li class="nav-item">
-                <a class="nav-link text-white" href="users.php">Manage Users</a>
-            </li>
-            
-            
-            <li class="nav-item">
-                <a class="nav-link text-white" href="products.php">Products</a>
+                <a class="nav-link text-white" href="products.php">Data Produk</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-white" href="suppliers.php">Suppliers</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white" href="purchases.php">Purchases</a>
+                <a class="nav-link text-white" href="purchases.php">pembelian</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-white" href="logout.php">Logout</a>

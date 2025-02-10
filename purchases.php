@@ -5,8 +5,8 @@ require_once 'config/database.php';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $supplier_id = $_POST['supplier_id'];
     $products = $_POST['products']; // Array of product IDs
-    $quantities = $_POST['quantities']; // Array of quantities
-    $prices = $_POST['prices']; // Array of prices
+    $quantities = $_POST['banyak']; // Array of quantities
+    $prices = $_POST['harga']; // Array of prices
 
     $total_amount = 0;
     for ($i = 0; $i < count($products); $i++) {
